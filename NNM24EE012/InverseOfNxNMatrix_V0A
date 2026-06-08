@@ -1,0 +1,126 @@
+/*
+Name: Amal Najeeb
+USN: NNM24EE012
+9th june 2026
+Dept of Electrical and Electronics Engineering
+NMAM Institute of Technology
+
+About: The following code can take an NxN matrix and calculate its inverse using the Gauss Jordan Elimination method
+*/
+
+#include <stdio.h>
+
+int main(){
+    //declaring variables
+    int N = 4;                      //size of matrix
+    int i,j,k;                      //loop variables
+    float A[N][N*2], multiplier;   //array of size Nx2N to make augmented matrix
+
+    //creating input matrix
+    printf("Enter value for %dx%d matrix: ",N,N);
+    for(i=0; i<N; i++){
+        for(j=0; j<N; j++){
+            scanf("%f", &A[i][j]);
+        }
+    }
+
+    //displaying input matrix
+    printf("\nInput Matrix:\n");
+    for(i=0; i<N; i++) {
+        for(j=0; j<N; j++) {
+            printf("%.2f ", A[i][j]);
+        }
+        printf("\n");
+    }
+    
+    //creating augmented matrix
+    for(i=0; i<N; i++){
+        for(j=N; j<2*N; j++){
+            if(i == (j-N)){
+                A[i][j] = 1;     //making diagonal elements 1
+            } else {
+                A[i][j] = 0;     //makng all other elements 0
+            }
+        }
+    }
+
+    //printing augmented matrix
+    printf("\nAugmented matrix : \n");
+    for(i=0; i<N; i++){
+        for(j=0; j<2*N; j++){
+            printf("%.2f ", A[i][j]);
+        }
+        printf("\n");
+    }
+
+    //applying Gauss Jordon elimination method
+    for(i=0; i<N; i++) {                 //iterating row wise
+        //make the diagonal elementss = 1
+        float diag = A[i][i];
+        for(j=0; j<2*N; j++) {
+            A[i][j] /= diag;                //dividing the whole row by the diagonal element
+        }
+
+        //make other elements in  the column 0
+        for(k=0; k<N; k++) {
+            if(k != i) {
+                multiplier = A[k][i];
+                for(j=0; j<2*N; j++) {
+                    A[k][j] -= multiplier * A[i][j];   //applying row tranformation
+                }
+            }
+        }
+    }
+
+
+    // Output inverse matrix
+    printf("\nInverse Matrix:\n");
+    for(i=0; i<N; i++) {
+        for(j=N; j<2*N; j++) {
+            printf("%.2f ", A[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+
+}
+
+/*
+Output
+------
+
+Enter value for 4x4 matrix: 1
+2
+1
+1
+0
+3
+2
+1
+3
+1
+2
+1
+2
+3
+2
+2
+
+Input Matrix:
+1.00 2.00 1.00 1.00 
+0.00 3.00 2.00 1.00 
+3.00 1.00 2.00 1.00 
+2.00 3.00 2.00 2.00 
+
+Augmented matrix : 
+1.00 2.00 1.00 1.00 1.00 0.00 0.00 0.00 
+0.00 3.00 2.00 1.00 0.00 1.00 0.00 0.00 
+3.00 1.00 2.00 1.00 0.00 0.00 1.00 0.00 
+2.00 3.00 2.00 2.00 0.00 0.00 0.00 1.00 
+
+Inverse Matrix:
+1.33 -0.33 0.33 -0.67 
+2.00 -0.00 0.00 -1.00 
+-1.67 0.67 0.33 0.33 
+-2.67 -0.33 -0.67 2.33 */
