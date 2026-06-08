@@ -1,1 +1,89 @@
 
+//Sankalpa H
+//NNM24EE097
+// 08/06/2026
+ //Electrical and Electronics Engineering
+ // College: NMAMIT*/
+
+#include <stdio.h>
+
+int main()
+{
+    int n, i, j, k;
+    float a[20][40], ratio;
+
+    // Input the order of the matrix
+    printf("Enter the order of matrix: ");
+    scanf("%d", &n);
+
+    // Input matrix elements
+    printf("Enter the elements of the matrix:\n");
+    for(i = 0; i < n; i++)
+    {
+        for(j = 0; j < n; j++)
+        {
+            scanf("%f", &a[i][j]);
+        }
+    }
+
+    // Create the augmented matrix [A | I]
+    for(i = 0; i < n; i++)
+    {
+        for(j = n; j < 2 * n; j++)
+        {
+            if(j == i + n)
+                a[i][j] = 1;   // Identity matrix element
+            else
+                a[i][j] = 0;   // Non-diagonal element
+        }
+    }
+
+    // Perform Gauss-Jordan elimination
+    for(i = 0; i < n; i++)
+    {
+        // Check if diagonal element is zero
+        if(a[i][i] == 0.0)
+        {
+            printf("Inverse does not exist.\n");
+            return 0;
+        }
+
+        // Make all other elements in the current column zero
+        for(j = 0; j < n; j++)
+        {
+            if(i != j)
+            {
+                ratio = a[j][i] / a[i][i];
+
+                for(k = 0; k < 2 * n; k++)
+                {
+                    a[j][k] = a[j][k] - ratio * a[i][k];
+                }
+            }
+        }
+    }
+
+    // Divide each row by its diagonal element
+    for(i = 0; i < n; i++)
+    {
+        float diag = a[i][i];
+
+        for(j = 0; j < 2 * n; j++)
+        {
+            a[i][j] = a[i][j] / diag;
+        }
+    }
+
+    // Display the inverse matrix
+    printf("\nInverse Matrix:\n");
+    for(i = 0; i < n; i++)
+    {
+        for(j = n; j < 2 * n; j++)
+        {
+            printf("%.2f\t", a[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
