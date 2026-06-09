@@ -1,1 +1,20 @@
+/*AUTHOR=Adhya D A
+USN=NNM24EE005
+Date=09 JUNE 2026
+Department=Electrical and Electronics
+College=NMAM Institute of Technology
+To prove curl of H is perpendicular to H*/ 
+#include <stdio.h>
+int main()
+{
+    int Hx=1;
+    int Cx=2;
+    int dot product= Hx*Cx;
+    printf("dot product,%d");
+    if (dot product==0)
+        printf("curl is perpendicular to H");
+    else
+        printf("curl is not perpendicular to H");
+    return 0;
+}
 
