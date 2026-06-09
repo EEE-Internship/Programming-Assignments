@@ -1,7 +1,7 @@
 /* **********************************************************************************************************
    * Author- Tilak Poojary                                                                                  *
    * USN- NNM24EE127                                                                                        *
-   * Date- 08 June 2026                                                                                     *
+   * Date- 09 June 2026                                                                                     *
    * Dept- Electrical and Electronics Engineering Department                                                *
    * College- NMAM Institute of Technology, Nitte                                                           *
    * Purpose- To prove that del x H is perpendicular to H                                                   *
