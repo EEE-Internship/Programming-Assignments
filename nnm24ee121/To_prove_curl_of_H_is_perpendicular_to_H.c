@@ -30,15 +30,12 @@ int main() {
     return(0);
 }
 /*Output
+The H vector is -y i+ x j +0 k
 
-Clear
+the curl of H vector is 0 i+ 0 j +2 k
 
-the curl of H vector is 010 j+ 2 k
-
-The Divergence of curl of H vector is 0
+The Divergence of curl of H vector is 0.
 
 Therefore we can say that curl of H vector is perpendicular to H vector.
 
-Hence proved.
-
-Code Execution Successful*/
+Hence proved.*/
