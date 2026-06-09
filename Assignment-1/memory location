@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+    int a=10;
+    char ch='A';
+    float f=12.5;
+    printf("Address of a: %p\n",&a);
+    printf("Size of a=%d bytes\n",sizeof(a));
+    printf("Address of ch: %p\n",&ch);
+    printf("Size of ch=%d bytes\n",sizeof(ch));
+    printf("Address of f: %p\n",&f);
+    printf("Size of f=%d bytes\n",sizeof(f));
+    return 0;
+}
