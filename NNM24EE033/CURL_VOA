@@ -1,0 +1,54 @@
+/* *************************************************************************
+   * Author- DAKSHESH KUMAR                                                                                  
+   * USN- NNM24EE033                                                                                         
+   * Date- 09 June 2026                                                                                      
+   * Dept- Electrical and Electronics Engineering Department                                                 
+   * College- NMAM Institute of Technology, Nitte                                                            
+   * Purpose- To find WHEATHER CURL IS PERPENDICULAR TO THE H VECTOR OR NOT 
+   ***************************************************************************/
+
+#include <stdio.h>
+
+int main() {
+
+    float Hx, Hy, Hz; // Declaring variables for the H vector 
+    float Curl_x, Curl_y, Curl_z;// Declaring variables for the Curl vector
+    
+
+    float dot_product; // dot product of H and Curl(H) i.e.(Hx * Curl_x)+(Hy * Curl_y)+(Hz * Curl_z)
+   
+    printf("Enter the components of Vector H:\n"); // input values
+    printf("Enter Hx: ");
+    scanf("%f", &Hx); // value stored in HX
+    printf("Enter Hy: ");
+    scanf("%f", &Hy); // value stored in Hy
+    printf("Enter Hz: ");
+    scanf("%f", &Hz); // value stored in Hz
+    printf("Enter the components of Curl(H):\n");
+    printf("Enter Curl_x: ");
+    scanf("%f", &Curl_x); // value stored in Curl_x
+    printf("Enter Curl_y: ");
+    scanf("%f", &Curl_y);// value stored in Curl_y
+    printf("Enter Curl_z: ");
+    scanf("%f", &Curl_z);// value stored in Curl_z
+
+    printf("\n");
+
+    // To calculate Dot Product:(Hx * Curl_x)+(Hy * Curl_y)+(Hz * Curl_z)
+    dot_product = (Hx * Curl_x) + (Hy * Curl_y) + (Hz * Curl_z);
+
+  
+    printf("The Dot Product of H and Curl(H) is: %.2f\n", dot_product);
+
+   //condition if dotproduct of curl and H = 0 then they are perpendicular else not
+    if (dot_product == 0) 
+    {
+        printf("H is perpendicular\n");
+    } 
+    else 
+    {
+        printf("H is not perpendicular\n");
+    }
+
+    return 0;
+}
