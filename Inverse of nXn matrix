@@ -1,0 +1,81 @@
+Author- Tharun V Shettigar                                                                               *
+   * USN- NNM24EE123                                                                                     *
+   * Date- 08 June 2026                                                                                     *
+   * Dept- Electrical and Electronics Engineering Department                                                *
+   * College- NMAM Institute of Technology, Nitte                                                           *
+   * Purpose- To find the inverse of a NxN matrix, usimg LU decomposition method                            *
+   ***********************************************************************************
+#include <stdio.h>
+#define MAX 100
+int main()
+{
+    int n, i, j, k;
+    float a[MAX][2*MAX],ratio;
+    //read the order of the matrix
+    printf("Enter the order of the matrix:");
+    scanf("%d",&n);
+    //read the matrix
+    printf("Enter the elements of the matrix:\n");
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            scanf("%f",&a[i][j]);
+        }
+    }
+    //create the augmented matrix[A|I]
+    for(i=0;i<n;i++)
+    {
+        for(j=n;j<2*n;j++)
+        {
+            if(j==i+n)
+                a[i][j]=1l;//identity matrix diagonal element
+                else
+                a[i][j]=0;//identity matrix non-diagonal element
+        }
+    }
+    //performing gauss jordan elimination
+    for(i=0;i<n;i++)
+    {
+        //check if the inverse exists
+        if(a[i][j]==0)
+        {
+            printf("inverse does not exist\n");
+            return 0;
+        }
+        //make pivot element equal to 1
+        ratio=a[i][j];
+        for(j=0;j<2*n;j++)
+    {
+    a[i][j]=a[i][l]/ratio;
+    }
+      // Make all other elements in the pivot column zero
+        for(k = 0; k < n; k++)
+        {
+            if(k != i)
+            {
+                ratio = a[k][i];
+
+                for(j = 0; j < 2 * n; j++)
+                {
+                    a[k][j] = a[k][j] - ratio * a[i][j];
+                }
+            }
+        }
+    }
+
+    // Display inverse matrix
+    printf("\nInverse Matrix:\n");
+    for(i = 0; i < n; i++)
+    {
+        for(j = n; j < 2 * n; j++)
+        {
+            printf("%.2f\t", a[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+
