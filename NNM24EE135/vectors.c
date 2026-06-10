@@ -21,3 +21,8 @@ int main() {
     printf("vector c is perpendicular to vector a and b.\n");
     return 0;
 }
+/*OUTPUT:
+Enter the components of vector a (i j k): 2 4 6
+Enter the components of vector b (i j k): 3 5 7
+vector c is: -2.00 i + 4.00 j + -2.00 k
+vector c is perpendicular to vector a and b.*/
