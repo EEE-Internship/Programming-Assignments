@@ -1,0 +1,65 @@
+#include <stdio.h>
+/*
+Anwitha Bhat
+NNM24EE022
+10-June-2026
+Department of Electrical and Electronics
+NMAM Institute of Technology Nitte
+Program which tells if A Cross B abd C are in same direction or not */
+int main()
+{
+    int A[3], B[3], C[3];
+    int cross_product[3];
+    int dot_product;
+
+    printf("Enter vector A: ");
+    scanf("%d%d%d", &A[0], &A[1], &A[2]);
+
+    printf("Enter vector B: ");
+    scanf("%d%d%d", &B[0], &B[1], &B[2]);
+
+    printf("Enter vector C: ");
+    scanf("%d%d%d", &C[0], &C[1], &C[2]);
+
+    // Cross Product A x B
+    cross_product[0] = A[1]*B[2] - A[2]*B[1];
+    cross_product[1] = A[2]*B[0] - A[0]*B[2];
+    cross_product[2]= A[0]*B[1] - A[1]*B[0];
+
+    // Dot Product (A x B) . C
+    dot_product= cross_product[0]*C[0]
+        + cross_product[1]*C[1]
+        + cross_product[2]*C[2];
+
+    printf("A x B = (%d, %d, %d)\n",
+           cross_product[0], cross_product[1], cross_product[2]);
+
+    printf("Dot Product = %d\n", dot_product);
+
+    if(dot_product> 0)
+        printf("Same direction\n");
+    else if(dot_product< 0)
+        printf("Opposite direction\n");
+    else
+        printf("Perpendicular\n");
+
+    return 0;
+}
+
+
+output
+Enter vector A: 1 2 3
+Enter vector B: 1 2 3
+Enter vector C: 1 2 3
+A x B = (0, 0, 0)
+Dot Product = 0
+Perpendicular
+
+
+
+Enter vector A: 1 4 5
+Enter vector B: 2 3 4
+Enter vector C: 0 0 4
+A x B = (1, 6, -5)
+Dot Product = -20
+Opposite direction
