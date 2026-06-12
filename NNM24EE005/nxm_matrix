@@ -1,0 +1,20 @@
+/*AUTHOR=Adhya D A
+USN=NNM24EE005
+Date=10 JUNE 2026
+Department=Electrical and Electronics
+College=NMAM Institute of Technology
+To find the inverse of nxm matrix*/
+#include <stdio.h>
+int main()
+{
+int M,N;
+  printf("enter the values of row:");
+  scanf("%d,n");
+printf("enter the values of columns");
+scanf("%d,n");
+if(N!=M)
+   {
+    printf("inverse matrix exist only for square matrix");
+   }
+        return 0;
+}
