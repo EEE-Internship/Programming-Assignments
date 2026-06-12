@@ -1,0 +1,80 @@
+#include <stdio.h>
+
+#define MAX 10
+
+int main()
+{
+    int n, i, j, k;
+    float a[MAX][2 * MAX], ratio;
+
+    // Read the order of the matrix
+    printf("Enter the order of matrix: ");
+    scanf("%d", &n);
+
+    // Read matrix elements
+    printf("Enter the matrix elements:\n");
+    for(i = 0; i < n; i++)
+    {
+        for(j = 0; j < n; j++)
+        {
+            scanf("%f", &a[i][j]);
+        }
+    }
+
+    // Create augmented matrix [A | I]
+    for(i = 0; i < n; i++)
+    {
+        for(j = n; j < 2 * n; j++)
+        {
+            if(j == i + n)
+                a[i][j] = 1;  // Identity matrix diagonal element
+            else
+                a[i][j] = 0;  // Identity matrix non-diagonal element
+        }
+    }
+
+    // Apply Gauss-Jordan elimination
+    for(i = 0; i < n; i++)
+    {
+        // Check if inverse exists
+        if(a[i][i] == 0)
+        {
+            printf("Inverse does not exist.\n");
+            return 0;
+        }
+
+        // Make pivot element equal to 1
+        ratio = a[i][i];
+        for(j = 0; j < 2 * n; j++)
+        {
+            a[i][j] = a[i][j] / ratio;
+        }
+
+        // Make all other elements in the pivot column zero
+        for(k = 0; k < n; k++)
+        {
+            if(k != i)
+            {
+                ratio = a[k][i];
+
+                for(j = 0; j < 2 * n; j++)
+                {
+                    a[k][j] = a[k][j] - ratio * a[i][j];
+                }
+            }
+        }
+    }
+
+    // Display inverse matrix
+    printf("\nInverse Matrix:\n");
+    for(i = 0; i < n; i++)
+    {
+        for(j = n; j < 2 * n; j++)
+        {
+            printf("%.2f\t", a[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
