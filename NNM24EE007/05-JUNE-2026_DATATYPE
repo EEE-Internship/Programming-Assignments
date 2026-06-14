@@ -1,0 +1,30 @@
+/*NAME: Adithi Rai
+  USN: NNM24EE007
+  Dept: Electrical and Electronics dept
+*/
+
+/*this program enables you to print the memory address and sizes of different variables and also analyze how the data is stored
+in the memory*/
+
+
+
+#include <stdio.h>      //includes standard i/o functions
+int main()              //main function
+{
+    char c='A';       //declares a character variable
+    int i=10;         //declares an integer variable
+    float f=3.14;     //declares a float variable
+    double d=3.14159; //declares a double variable
+
+    printf("address of char variable   : %p\n", &c); //prints the memory address of c
+    printf("address of int variable    : %p\n", &i); //prints the memory address of i
+    printf("address of float variable  : %p\n", &f); //prints the memory address of f
+    printf("address of double variable : %p\n", &d); //prints the memory address of d
+
+    printf("Size of char  : %d bytes\n", (int)sizeof(c)); //size of char
+    printf("size of int   : %d bytes\n", (int)sizeof(i)); //size of int
+    printf("size of float : %d bytes\n", (int)sizeof(f)); //size of float
+    printf("size of double: %d bytes\n", (int)sizeof(d)); //size of double
+
+    return 0;//exits the program 
+}
