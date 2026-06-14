@@ -1,0 +1,2 @@
+Enter a number: 4
+Factorial of 4 is 24
