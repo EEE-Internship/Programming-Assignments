@@ -56,3 +56,19 @@ int main()
 
 return 0;
 }
+//OUTPUT:
+//enter the name of the Student: Veda
+//enter the USN of the student: NNM24EE128
+//Department: EEE
+//enter the CIE marks: 37
+//enter the SEE marks: 39
+//Total Marks= 76
+// marks2-marks1=2
+ //marks2*2=78
+ //(marks1+marks2)/10=7.60
+//result: PASS
+//SEE marks after increment: 40
+//SEE marks after decrement: 39
+//size of int= 4 bytes
+//size of float= 4 bytes
+//size of char= 1 bytes
