@@ -37,3 +37,14 @@ int main()
     }
 return 0;
 }
+
+
+//**OUTPUT1**
+//Enter your grade: 
+//B
+//well done!
+
+//**OUTPUT2**
+//Enter your grade: 
+//V
+//Invalid grade
