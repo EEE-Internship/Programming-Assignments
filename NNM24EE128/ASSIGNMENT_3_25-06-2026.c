@@ -48,3 +48,34 @@ int main()
 
     return 0;
 }
+
+//OUTPUT
+//enter the name of the student: 
+//Veda
+//enter the reg_num: 
+//128
+//enter the marks in Network Analysis: 
+//56
+//enter the marks in Analog Signal Processing: 
+//74
+//enter the marks in Electrical Machines: 
+//86
+//enter the marks in Control System 
+//92
+//enter the marks in Intruments and Measurements 
+//63
+//Total Marks Obtained out of 500: 371 
+//Percentage of the student: 74.20
+
+//PASSED!!
+
+//Grade= C
+
+// -----RESULTS-----
+
+//Name: Veda 
+//Register Number: 128 
+//Total Marks Obtained: 371
+//Percentage= 74.20
+//Result: PASS
+//Grade: C
