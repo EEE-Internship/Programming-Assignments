@@ -57,3 +57,23 @@ int main()
     printf("Average quantity per product: %.2f\n",average);
     return 0;
 }
+
+//OUTPUT
+//enter the number of product: 3
+//Enter the details of the product 1
+//enter the product name: dairymilk
+//Enter the product ID: 8526
+//enter the product Quantity: 78
+//Enter the details of the product 2
+//enter the product name: lays 
+//Enter the product ID: 2599
+//enter the product Quantity: 34
+//Enter the details of the product 3
+//enter the product name: dietcoke
+//Enter the product ID: 69998
+//enter the product Quantity: 154
+//maximum order limit reached!!
+//**ORDER SUMMARY**
+//Number of valid products: 2
+//total quantity ordered: 112
+//Average quantity per product: 56.00
