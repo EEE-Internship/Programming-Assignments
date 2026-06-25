@@ -1,0 +1,68 @@
+/*
+Anwitha Bhat
+NNM24EE022
+25-June-2026
+Department of Electrical and Electronics
+NMAM Institute of Technology Nitte
+Program which demonstrates switch statement */
+
+
+
+#include<stdio.h>
+int main()
+{
+    int math,science,social,hindi;
+    printf("Enter math marks:");
+    scanf("%d",&math);
+
+     printf("Enter science marks:");
+    scanf("%d",&science);
+
+     printf("Enter social marks:");
+    scanf("%d",&social);
+
+     printf("Enter hindi marks:");
+    scanf("%d",&hindi);
+
+
+    int total_marks=math+science+social+hindi;
+    int avg=total_marks/4;
+
+
+    printf("Total marks=%d\n",total_marks);
+      printf("Average=%d\n",avg);
+
+
+      if(avg>=40)
+      {
+        printf("Pass\n");
+
+      }
+      else
+      {
+        printf("Fail\n");
+      }
+char A,B,C,D,F;
+char grade=(avg>=90)?'A':
+          (avg>=75)?'B':
+          (avg>=50)?'C':
+          (avg>=40)?'D':'F';
+          
+
+          printf("The garde is %c",grade);
+          
+
+    return 0;
+
+    
+}
+
+
+OUTPUT
+Enter math marks:90
+Enter science marks:50
+Enter social marks:67
+Enter hindi marks:89
+Total marks=296
+Average=74
+Pass
