@@ -23,3 +23,9 @@ int main()
  printf("Largest number = %d\n", result);
  return 0;
 }
+
+//OUTPUT
+//Enter three numbers: 12
+//15
+//18
+//Largest number = 18
