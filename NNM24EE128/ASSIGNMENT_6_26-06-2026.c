@@ -18,3 +18,7 @@ int main()
     printf("Sum = %d\n", result);
     return 0;
 }
+
+//OUTPUT
+//Enter two numbers: 78 25
+//Sum= 103
