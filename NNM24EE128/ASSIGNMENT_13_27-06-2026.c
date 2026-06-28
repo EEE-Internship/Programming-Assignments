@@ -7,6 +7,8 @@ int main()
     int v=79;
     int *p=&v;
     *p=99;          
-    printf("Value = %d", v);
+    printf("Value= %d", v);
     return 0;
 }
+//output
+//Value= 99
