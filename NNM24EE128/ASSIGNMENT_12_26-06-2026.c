@@ -67,3 +67,13 @@ float divide(int a,int b)
 {
     return (float)a/b;
 }
+//output
+//Enter the first number: 5
+//Enter the second number: 10
+
+//1.Addition
+//2.Subtraction
+//3.Multiplication
+//4.Division
+//Enter your choice: 3
+//multiplication= 50
