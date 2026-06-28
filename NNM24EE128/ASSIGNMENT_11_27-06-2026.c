@@ -29,3 +29,13 @@ int main()
     }
     return 0;
 }
+//output
+//Enter the number of elements: 5                                                                                                                                                 
+//Enter the array elements:                  
+//10
+//20
+//30
+//40
+//50
+//Enter the element to search: 40
+//Element found at position 4
