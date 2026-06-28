@@ -46,3 +46,48 @@ int main()
    printf("Runrate: %.0f\n",runrate); 
    return 0;
 }
+//Output
+//Enter the number of players: 5                                                                                                                                                  
+//enter the player name: Virat               
+//Runs scored by the player: 96
+//Total number of balls faced by the player: 56
+//Number of fours hit by the player: 4
+//Number of sixes hit by the player: 2
+
+
+//enter the player name: Rohit
+//Runs scored by the player: 46
+//Total number of balls faced by the player: 12
+//Number of fours hit by the player: 3
+//Number of sixes hit by the player: 1
+
+
+//enter the player name: ABD   
+//Runs scored by the player: 106
+//Total number of balls faced by the player: 42
+//Number of fours hit by the player: 6
+//Number of sixes hit by the player: 2
+
+
+//enter the player name: Dev
+//Runs scored by the player: 36
+//Total number of balls faced by the player: 14
+//Number of fours hit by the player: 2
+//Number of sixes hit by the player: 0
+
+
+//enter the player name: Rajat
+//Runs scored by the player: 89
+//Total number of balls faced by the player: 23
+//Number of fours hit by the player: 5
+//Number of sixes hit by the player: 3
+
+
+
+//------ SCOREBOARD ------
+//Total players: 5
+//Total runs: 373
+//Total balls: 147
+//Total fours: 20
+//Total sixes: 8
+//Runrate: 15
