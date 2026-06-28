@@ -20,3 +20,12 @@ int main()
     }
     return 0;
 }
+//output
+//enter the number of elements: 6
+//enter the elements 1: 2
+//enter the elements 2: 5
+//enter the elements 3: 3
+//enter the elements 4: 7
+//enter the elements 5: 9
+//enter the elements 6: 6
+//array elements are: 2, 5, 3, 7, 9, 6, 
