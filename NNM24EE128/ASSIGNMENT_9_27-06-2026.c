@@ -54,3 +54,24 @@ int main()
     }
     return 0;
 }
+
+//output
+//enter the value of resistance: 
+//100
+//enter the value of inductance: 
+//0.1
+//enter the value of capacitancetance: 
+//0.0001
+//enter the value of supply voltage: 
+//10
+//enter the value of frequency: 
+//50
+//Inductive Reactance Xl= 31.420 ohms
+//Capacitive Reactance Xc= 31.827 ohms
+//Impedance Z= 100.001 ohms
+
+//Current= 0.100
+//Phase Angle= -0.233
+//Power factor= 1.000
+//Resonant Frequency= 50.323
+//Circuit is Capacitive
